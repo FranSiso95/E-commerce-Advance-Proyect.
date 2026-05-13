@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:3000/productos";
+const API_URL =
+  "https://e-commerce-advance-proyect.onrender.com/productos";
 
 // OBTENER PRODUCTOS
 export const obtenerProductos = async () => {

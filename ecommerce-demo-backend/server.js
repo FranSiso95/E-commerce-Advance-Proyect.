@@ -123,8 +123,8 @@ app.post("/productos", verificarToken, upload.single("imagen"), (req, res) => {
   } = req.body;
 
   const imagen = req.file
-    ? `http://localhost:3000/uploads/${req.file.filename}`
-    : "";
+  ? `https://e-commerce-advance-proyect.onrender.com/uploads/${req.file.filename}`
+  : "";
 
   const query = `
     INSERT INTO productos
