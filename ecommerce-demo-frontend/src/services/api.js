@@ -5,7 +5,12 @@ const API_URL =
 export const obtenerProductos = async () => {
 
   const response = await fetch(API_URL);
-  return response.json();
+
+  const data = await response.json();
+
+  console.log(data);
+
+  return data;
 
 };
 
