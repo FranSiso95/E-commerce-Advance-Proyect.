@@ -52,6 +52,8 @@ app.post("/login", express.json(), (req, res) => {
       console.log("Usuario recibido:", usuario);
       console.log("Admin encontrado:", admin);
 
+      console.log(admin.password);
+
       const passwordCorrecta =
         await bcrypt.compare(
           password,
