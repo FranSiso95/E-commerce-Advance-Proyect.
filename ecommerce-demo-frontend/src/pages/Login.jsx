@@ -97,7 +97,7 @@ function Login() {
         <input
           type="password"
           name="password"
-          placeholder="Contraseña"
+          autoComplete="current-password"
           value={formulario.password}
           onChange={handleChange}
           className="w-full p-3 rounded bg-gray-800 text-white mb-4"
