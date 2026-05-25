@@ -49,6 +49,9 @@ app.post("/login", express.json(), (req, res) => {
 
       const admin = results[0];
 
+      console.log("Usuario recibido:", usuario);
+      console.log("Admin encontrado:", admin);
+
       const passwordCorrecta =
         await bcrypt.compare(
           password,
@@ -87,11 +90,6 @@ app.post("/login", express.json(), (req, res) => {
 
     }
   );
-
-  console.log("Usuario recibido:", usuario);
-  console.log("Password recibida:", password);
-  console.log("Admin encontrado:", admin);
-
 });
 
 
@@ -200,7 +198,7 @@ app.put("/productos/:id", verificarToken, upload.single("imagen"), (req, res) =>
   } = req.body;
 
   const imagen = req.file
-    ? `http://localhost:3000/uploads/${req.file.filename}`
+    ? `https://e-commerce-advance-proyect.onrender.com/uploads/${req.file.filename}`
     : req.body.imagen;
 
   const query = `
