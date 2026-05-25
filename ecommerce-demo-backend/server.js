@@ -50,8 +50,8 @@ app.post("/login", express.json(), (req, res) => {
       const admin = results[0];
 
       console.log("Usuario recibido:", usuario);
-      console.log("Admin encontrado:", admin);
-
+      console.log("Admin encontrado:", admin);  
+      
       console.log(admin.password);
 
       const passwordCorrecta =

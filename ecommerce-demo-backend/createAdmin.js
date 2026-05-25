@@ -5,7 +5,7 @@ const connection = require("./config/db");
 
 const crearAdmin = async () => {
 
-  const usuario = "admin";
+  const usuario = "admin2";
 
   const passwordPlano = "1234";
 
