@@ -6,11 +6,15 @@ const upload = require("./config/multer");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const verificarToken = require("./middlewares/auth");
+const fs = require("fs");
 
 const app = express();
 
 app.use(cors());
 
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
 app.use("/uploads", express.static("uploads"));
 
 app.get("/", (req, res) => {
